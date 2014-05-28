@@ -4,13 +4,8 @@
 package cn.zhucongqi.clientrequest;
 
 import java.sql.SQLException;
-import java.util.logging.Logger;
 
-import org.slf4j.LoggerFactory;
 
-import com.smartfoxserver.bitswarm.util.Logging;
-import com.smartfoxserver.v2.SmartFoxServer;
-import com.smartfoxserver.v2.controllers.system.Login;
 import com.smartfoxserver.v2.db.IDBManager;
 import com.smartfoxserver.v2.entities.User;
 import com.smartfoxserver.v2.entities.data.ISFSArray;

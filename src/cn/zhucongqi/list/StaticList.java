@@ -27,7 +27,7 @@ public class StaticList {
 	
 	public static void print()
 	{
-		Hashtable ht = userList;
+		Hashtable<String, String> ht = userList;
 		for(Iterator<?> itr = ht.keySet().iterator(); itr.hasNext();){
 			String key = (String) itr.next();
 			Object value =  ht.get(key);

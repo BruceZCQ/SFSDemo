@@ -46,29 +46,29 @@ public class SFSListTestingMain {
 		}
 		
 		System.out.println("alltable");
-		for(Iterator itr = table.keySet().iterator(); itr.hasNext();){
-			String key = (String) itr.next();
-			ObjectModel value = (ObjectModel) table.get(key);
+		for(Iterator<String> itr = table.keySet().iterator(); itr.hasNext();){
+			String key = itr.next();
+			ObjectModel value = table.get(key);
 			System.out.println(key+"--"+value.getAddress());
 		}
 		
 
-		ObjectModel first = (ObjectModel) table.get("name0");
+		ObjectModel first = table.get("name0");
 		first.setAddress("new addr");
 		
 		
 		System.out.println("after alltable");
-		for(Iterator itr = table.keySet().iterator(); itr.hasNext();){
-			String key = (String) itr.next();
-			ObjectModel value = (ObjectModel) table.get(key);
+		for(Iterator<String> itr = table.keySet().iterator(); itr.hasNext();){
+			String key = itr.next();
+			ObjectModel value = table.get(key);
 			System.out.println(key+"--"+value.getAddress());
 		}
 
 		System.out.println("remove");
 		table.remove("name4");
-		for(Iterator itr = table.keySet().iterator(); itr.hasNext();){
-			String key = (String) itr.next();
-			ObjectModel value = (ObjectModel) table.get(key);
+		for(Iterator<String> itr = table.keySet().iterator(); itr.hasNext();){
+			String key = itr.next();
+			ObjectModel value = table.get(key);
 			System.out.println(key+"--"+value.getAddress());
 		}
 		

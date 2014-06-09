@@ -10,7 +10,6 @@ public class printSession {
 		Session s = new Session();
 		s.setLoggedIn(true);
 		s.setType(SessionType.DEFAULT);
-		s.set
 		System.out.println(s);
 	}
 }

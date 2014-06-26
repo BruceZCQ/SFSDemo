@@ -15,24 +15,26 @@ public class GetPeopleHandler extends BaseClientRequestHandler
 	@Override
 	public void handleClientRequest(User sender, ISFSObject params)
 	{
-		IDBManager dbManager = getParentExtension().getParentZone().getDBManager();
-		String sql = "SELECT * FROM people";
-		
-		try
-        {
-			// Obtain a resultset
-	        ISFSArray res = dbManager.executeQuery(sql, new Object[] {});
-	        
-	        // Populate the response parameters
-	        ISFSObject response = new SFSObject();
-	        response.putSFSArray("people", res);
-	        
-	        // Send back to requester
-	        send("getPeople", response, sender);
-        }
-        catch (SQLException e)
-        {
-	        trace(ExtensionLogLevel.WARN, "SQL Failed: " + e.toString());
-        }
+//		IDBManager dbManager = getParentExtension().getParentZone().getDBManager();
+//		String sql = "SELECT * FROM people";
+//		
+//		try
+//        {
+//			// Obtain a resultset
+//	        ISFSArray res = dbManager.executeQuery(sql, new Object[] {});
+//	        
+//	        // Populate the response parameters
+//	        ISFSObject response = new SFSObject();
+//	        response.putSFSArray("people", res);
+//	        
+//	        // Send back to requester
+//	        send("getPeople", response, sender);
+//        }
+//        catch (SQLException e)
+//        {
+//	        trace(ExtensionLogLevel.WARN, "SQL Failed: " + e.toString());
+//        }
+		ISFSObject response = new SFSObject();
+        send("getPeople", response, sender);
 	}
 }

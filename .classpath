@@ -4,5 +4,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/sfs2x"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/sfs"/>
+	<classpathentry kind="lib" path="/Users/BruceZCQ/Downloads/imgExtension.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

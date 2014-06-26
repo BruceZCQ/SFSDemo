@@ -14,7 +14,16 @@ public class OOClientRequestHandle extends BaseClientRequestHandler {
 		ISFSObject parserObj = SFSObject.newFromJsonData(data);
 		System.out.println("username : "+parserObj.getUtfString("username"));
 		System.out.println("address :"+parserObj.getUtfString("address"));
-		
+//		String from = "brucezcq@gmail.com";
+//		String to = "zhucongqi@comisys.net";
+//		Email myEmail = new SFSEmail(from, to, "Test mail", "Hello from SFS2X");
+//		try {
+//			SmartFoxServer.getInstance().getMailService().sendMail(myEmail);
+//		} catch (MessagingException e) {
+//			e.printStackTrace();
+//			trace(e.getMessage());
+//		}
+		send("zcq", parserObj, paramUser);
 	}
 
 }

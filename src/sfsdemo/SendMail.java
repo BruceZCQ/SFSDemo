@@ -28,17 +28,17 @@ public class SendMail extends BaseClientRequestHandler {
 		System.out.println("names ========"+StaticData.getNames());
 		StaticData.addName("zcq");
 		
-		this.getApi().disconnectUser(paramUser,ClientDisconnectionReason.IDLE);
+//		this.getApi().disconnectUser(paramUser,ClientDisconnectionReason.IDLE);
 		
 		byte[] bytearray = paramISFSObject.getByteArray("img");
 		try {
 			BufferedImage imag=ImageIO.read(new ByteArrayInputStream(bytearray));
-			File imagesDir = new File("images","snap.jpg");
+			File imagesDir = new File("www/root/images","snap.jpg");
 			File parent = imagesDir.getParentFile();
 			if (!parent.exists()){
 				parent.mkdirs();
 			}
-			ImageIO.write(imag, "jpg", new File("images","snap.jpg"));
+			ImageIO.write(imag, "jpg", new File("www/root/images","snap.jpg"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -30,7 +30,7 @@ System.out.println("user ===== "+paramUser);
 		} 
 	}
 	Room lastJoinedroom = paramUser.getLastJoinedRoom();
-	if (!lastJoinedroom.equals(room)) {
+	if (!room.equals(lastJoinedroom)) {
 
 		try {
 			this.getApi().joinRoom(paramUser, room,"123456",false,null);

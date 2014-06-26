@@ -30,7 +30,7 @@ public class OOLoginEventHandle extends BaseServerEventHandler {
 		String logoutUser = o.getUtfString("zcq");
 		
 		User user = this.getApi().getUserByName(logoutUser);
-		if (!user.equals(null)){
+		if (user != null){
 
 			this.getApi().logout(user);
 		}

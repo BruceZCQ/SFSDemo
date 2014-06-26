@@ -9,8 +9,10 @@ import javax.crypto.SecretKey;
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.DESKeySpec;
 
+
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
+
 
 public class DesUtil {
 
@@ -19,27 +21,21 @@ public class DesUtil {
 	public static void main(String[] args) throws Exception {
 		String data = "123 456在出去朱丛启朱丛启朱丛启朱丛启朱丛启123 456在出去朱丛启朱丛启朱"
 				+ "丛启朱丛启朱丛启123 456在出去朱丛启朱丛启朱丛启朱丛启朱丛启123 456在出去朱丛"
-				+ "启朱丛启朱丛启朱丛启朱丛启123 456在出去朱丛启朱丛启朱丛启朱丛启朱丛启123 456"
-				+ "在出去朱丛启朱丛启朱丛启朱丛启朱丛启123 456在出去朱丛启朱丛启朱丛启朱丛启朱丛启12"
-				+ "3 456在出去朱丛启朱丛启朱丛启朱丛启朱丛启123 456在出去朱丛启朱丛启朱丛启朱丛启朱"
-				+ "丛启123 456在出去朱丛启朱丛启朱丛启朱丛启朱丛启123 456在出去朱丛启朱丛启朱丛启朱"
-				+ "丛启朱丛启123 456在出去朱丛启朱丛启朱丛启朱丛启朱丛启123 456在出去朱丛启朱丛启朱"
-				+ "丛启朱丛启朱丛启123 456在出去朱丛启朱丛启朱丛启朱丛启朱丛启123 456在出去朱丛启朱"
-				+ "丛启朱丛启朱丛启朱丛启123 456在出去朱丛启朱丛启朱丛启朱丛启朱丛启123 456在出去朱丛"
-				+ "启朱丛启朱丛启朱丛启朱丛启123 456在出去朱丛启朱丛启朱丛启朱丛启朱丛启123 456在出去"
-				+ "朱丛启朱丛启朱丛启朱丛启朱丛启123 456在出去朱丛启朱丛启朱丛启朱丛启朱丛启123 456在"
-				+ "出去朱丛启朱丛启朱丛启朱丛启朱丛启123 456在出去朱丛启朱丛启朱丛启朱丛启朱丛启123 45"
-				+ "6在出去朱丛启朱丛启朱丛启朱丛启朱丛启123 456在出去朱丛启朱丛启朱丛启朱丛启朱丛启123 45"
-				+ "6在出去朱丛启朱丛启朱丛启朱丛启朱丛启123 456在出去朱丛启朱丛启朱丛启朱丛启朱丛启123 45"
-				+ "6在出去朱丛启朱丛启朱丛启朱丛启朱丛启123 456在出去朱丛启朱丛启朱丛启朱丛启朱丛启123 456"
-				+ "在出去朱丛启朱丛启朱丛启朱丛启朱丛启123 456在出去朱丛启朱丛启朱丛启朱丛启朱丛启123 456在出"
-				+ "去朱丛启朱丛启朱丛启朱丛启朱丛启123 456在出去朱丛启朱丛启朱丛启朱丛启朱丛启123 456在出去朱丛"
-				+ "启朱丛启朱丛启朱丛启朱丛启123 456在出去朱丛启朱丛启朱丛启朱丛启朱丛启";
+				+ "启朱丛启朱丛启朱丛启朱丛启123 456在出去朱丛启朱丛启朱丛启朱丛启朱丛启123 456";
 		String key = "wang!@#$%";
 		
-		System.err.println(encrypt(data, key));
-		System.err.println(decrypt(encrypt(data, key), key));
-
+		String encryptData = encrypt(data,key);
+		
+		System.out.println(data.length() +"zzzzzzz" + encryptData.length()+"data bytes"+data.getBytes().length);
+//		
+//		System.err.println(encryptData);
+//		System.err.println(decrypt(encryptData, key));
+		
+		
+		 byte[] data1  = DataCompression.compress(encryptData);
+		 System.out.println(data1.length+"  "+new String(encryptData).getBytes().length);
+		String o = (String)DataCompression.decompress(data1);
+		System.out.println("oooooooo "+decrypt(o, key));
 	}
 	
 	/**

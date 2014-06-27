@@ -33,6 +33,7 @@ public class OOLoginEventHandle extends BaseServerEventHandler {
 		if (user != null){
 
 			this.getApi().logout(user);
+			this.getApi().disconnectUser(user);
 		}
 		
 		System.out.println("event ==="+event+logoutUser);

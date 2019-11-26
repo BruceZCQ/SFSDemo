@@ -1,4 +1,2 @@
-SFSDemo
+SFSConnecting
 =======
-
-SFSDemo
